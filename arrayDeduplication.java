@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class arrayDeduplication {
+	// the time complexity of this method is O(n^2). since result can inevtiably become the same size as arr in the worst case scenario, each iteration of the search would take O(n) time.
 	public static ArrayList<Integer> deduplicateArray(ArrayList<Integer> arr) {
 		ArrayList<Integer> result = new ArrayList<>();
 		for (Integer num : arr) {
@@ -22,6 +23,8 @@ public class arrayDeduplication {
 		sample.add(5); // duplicate
 		sample.add(50);
 		sample.add(50); // duplicate
+		sample.add(10); // duplicate
+		sample.add(1); // duplicate
 
 		// use the above array named 'sample', run deduplicateArray() on it and place the result in a variable named 'result'. then print it out to the terminal
 		ArrayList<Integer> result = new ArrayList<>();
