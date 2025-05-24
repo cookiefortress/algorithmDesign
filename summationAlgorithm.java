@@ -4,11 +4,15 @@ public class summationAlgorithm {
 			throw new ArithmeticException("a is greater than or equal to b");
 		}
 
-		int sum = 0;
-		for(int i = a; i <= b; i++) {
-			sum += i;
-		}
-		return sum;
+		// O(n) complexity implementation:
+			// int sum = 0;
+			// for(int i = a; i <= b; i++) {
+			// 	sum += i;
+			// }
+			// return sum;
+
+		// using a summation formula, the time complexity is O(1). in my original implementation, I used the commented-out for loop above, which has a time complexity of O(n) as its complexity increases along with the size of the distance between a and b. using the summation formula below, the time complexity becomes O(1) as the same formula must be calculated on the dataset, regardless of its size
+		return (b*(b+1)/2) - (a*(a-1)/2);
 	}
 	public static void main(String[] args) {
 		System.out.println(computeSum(1, 4));
